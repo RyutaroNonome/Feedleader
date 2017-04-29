@@ -2,7 +2,7 @@ class Entry < ActiveRecord::Base
   belongs_to :feed
 
   def add_origin_link
-    "#{convert_to_publish} 続きを→【<a href='#{url}' target='_blank' rel='noopener noreferrer'>#{feed.name}</a>】で読む♪".html_safe
+    "#{convert_to_publish}\n\n<p><strong>続きを【<a href='#{url}' target='_blank' rel='noopener noreferrer'>#{feed.name}</a>】で読む♪</strong></p>".html_safe
   end
 
   def convert_to_publish
